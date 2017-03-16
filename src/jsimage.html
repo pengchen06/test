@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="img" src="../image/1.gif" onmousedown="chage()" onmouseout="out()">
+<script>
+    function chage() {
+        document.getElementById("img").setAttribute("src","image/2.jpg")
+    }
+    function out(){
+        document.getElementById("img").src="image/3.jpg"
+    }
+</script>
+</body>
+</html>

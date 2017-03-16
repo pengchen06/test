@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>docHtml</title>
+</head>
+<body>
+<a id="pid" href="http://www.baidu.com">hello</a>
+<button onclick="doc()">按钮</button>
+<button onclick="change()">改变内容</button>
+<button onclick="get()">获得内容</button>
+<button onclick="chageUrl()">改变URL</button>
+<script>
+    function doc() {
+        document.write("word");
+    }
+    function get() {
+        var a=document.getElementById("pdi");
+        alert(a);
+    }
+    function change() {
+        document.getElementById("pid").innerHTML="改变内容了"
+
+    }
+    function chageUrl() {
+//        document.getElementById("pid").href="http://www.jikexueyuan.com";
+        document.getElementById("pid").setAttribute("href","http://www.jikexueyuan.com")
+    }
+</script>
+</body>
+</html>

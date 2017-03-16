@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="onload(this)">
+<div id="test" class="div" onmouseout="onMouseOut(this)" onmouseover="onover(this)" onmousedown="ondown(this)"
+     onmouseup="onup(this)" onmouseleave="onleave(this)">
+
+</div>
+<script>
+    function onMouseOut(obj) {
+        obj.innerHTML = "鼠标移除";
+    }
+    function onover(obj) {
+        obj.innerHTML = "鼠标进入";
+    }
+    function ondown(obj) {
+        obj.innerHTML = "鼠标按下";
+    }
+    function onup(obj) {
+        obj.innerHTML = "鼠标抬起";
+    }
+</script>
+
+<input type="text" onchange="onChange(this)"/>
+<input type="text" onselect="onSelect(this)" onblur="inblur(this)" onfocus="onFocus(this)"/>
+<script>
+    function onChange(obj) {
+        alert("内容改变了")
+    }
+    function onSelect(bg) {
+        bg.style.backgroundColor = "red";
+    }
+    function inblur(bg) {
+        bg.style.backgroundColor = "gray";
+    }
+    function onFocus(bg) {
+        bg.style.backgroundColor = "blue";
+    }
+    function onload(obj) {
+        alert("网页加载完毕！！")
+    }
+</script>
+</body>
+</html>

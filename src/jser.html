@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>句柄</title>
+</head>
+<body>
+<button id="btn">按钮</button>
+<script>
+    var x=document.getElementById("btn");
+    x.addEventListener("click",hello);
+    x.addEventListener("click",world);
+    x.removeEventListener("click",hello)
+    function hello(){
+    alert("hello");
+    }
+    function world() {
+        alert("world");
+    }
+</script>
+</body>
+</html>

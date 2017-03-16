@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件的2属性2方法</title>
+</head>
+<body>
+ <div id="div">
+     <button id="pid">hello</button>
+     <a id="aid" href="http://www.baidu.com">百度</a>
+ </div>
+<script>
+    document.getElementById("pid").addEventListener("click",showtype);
+    document.getElementById("pid").addEventListener("click",showtarget);
+    document.getElementById("div").addEventListener("click",div);
+    document.getElementById("aid").addEventListener("click",a)
+    function showtype(event) {
+        alert(event.type);
+        event.stopPropagation();//制作事件冒泡
+    }
+    function showtarget(event){
+        alert(event.target)
+    }
+    function div() {
+        alert("div")
+    }
+    function a(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+</script>
+</body>
+</html>
